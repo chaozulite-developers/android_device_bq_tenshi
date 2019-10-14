@@ -25,7 +25,7 @@ $(call inherit-product, device/bq/tenshi/device.mk)
 $(call inherit-product, device/bq/msm8937-common/msm8937.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := bq
@@ -35,12 +35,12 @@ PRODUCT_BRAND := bq
 PRODUCT_MODEL := Aquaris U Plus
 PRODUCT_MANUFACTURER := bq
 
-# Set product device & name
-PRODUCT_BUILD_PROP_OVERRIDES += \
-   PRODUCT_NAME=tenshi
-
 PRODUCT_GMS_CLIENTID_BASE := android-bq
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=bq/tenshi/tenshi:7.1.1/NMF26F/1106:user/release-keys \
-    PRIVATE_BUILD_DESC="tenshi-user 7.1.1 NMF26F 1106 release-keys"
+   PRODUCT_NAME=tenshi \
+   PRIVATE_BUILD_DESC="tenshi-user 7.1.1 NMF26F 1106 release-keys"
+
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop   
+BUILD_FINGERPRINT := "bq/tenshi/tenshi:7.1.1/NMF26F/1106:user/release-keys"
