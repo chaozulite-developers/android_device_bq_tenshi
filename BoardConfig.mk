@@ -22,9 +22,6 @@ DEVICE_PATH := device/bq/tenshi
 # Assert
 TARGET_OTA_ASSERT_DEVICE := Aquaris_U_Plus,tenshi
 
-# Kernel
-TARGET_KERNEL_CONFIG := lineage_tenshi_defconfig
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
